@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* 主体内容与导航栏并排 */
+        }
+        nav {
+            width: 200px; /* 侧边栏宽度 */
+            background-color: #009999;
+            color: white;
+            height: 100vh; /* 使导航栏充满屏幕高度 */
+            padding: 20px 10px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            margin-left: 220px; /* 留出导航栏宽度 */
+            padding: 20px;
+            flex: 1; /* 主内容区域自适应宽度 */
+            background-color: #f0f8f8;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #009999;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery img, .gallery video {
+            width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #009999;
+            color: white;
+            margin-top: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左侧导航栏 -->
+    <nav>
+        <h3>个人主页</h3>
+        <a href="#about">关于我</a>
+        <a href="#photos">图片展示</a>
+        <a href="#videos">视频展示</a>
+    </nav>
+
+    <!-- 主体内容 -->
+    <main>
+        <!-- 关于我 -->
+        <section id="about">
+            <h1>关于我</h1>
+            <p>你好，我是一名媒体工作者，擅长拍摄图片与视频，并提供剪辑、调色等专业服务。我致力于捕捉每一个精彩瞬间，通过视觉传递情感与故事。</p>
+        </section>
+
+        <!-- 图片展示 -->
+        <section id="photos">
+            <h2>图片展示</h2>
+            <p>以下是我创作的一些图片作品：</p>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/400x300?text=图片1" alt="图片1">
+                <img src="https://via.placeholder.com/400x300?text=图片2" alt="图片2">
+                <img src="https://via.placeholder.com/400x300?text=图片3" alt="图片3">
+            </div>
+        </section>
+
+        <!-- 视频展示 -->
+        <section id="videos">
+            <h2>视频展示</h2>
+            <p>以下是我创作的一些视频作品：</p>
+            <div class="gallery">
+                <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>版权所有 © 2024 | <a href="#about">回到顶部</a></p>
+    </footer>
+</body>
+</html>
